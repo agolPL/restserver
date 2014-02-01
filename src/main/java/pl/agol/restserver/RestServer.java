@@ -46,7 +46,7 @@ public class RestServer {
 		
 		try {
 			createAndStartServer();
-			DeploymentInfo restDeploymentInfo  = createRestDeploymant();
+			DeploymentInfo restDeploymentInfo  = createRestDeployment();
 			deploy(restDeploymentInfo);
 		} catch (ServletException e) {
 			throw new RestServerException(e);
@@ -115,7 +115,7 @@ public class RestServer {
 		private String host = "localhost";
 		private int port = 8081;
 		private String  contextPath = "/";
-		private String springContextConfigLocation = "src/main/resources/applicationContext.xml";
+		private String springContextConfigLocation = "src/main/resources/beans.xml";
 		
 		public Builder setHost(String host) {
 			this.host = host;
