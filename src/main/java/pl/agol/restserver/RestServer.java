@@ -62,7 +62,7 @@ public class RestServer {
 		server.start();
 	}
 	
-	private DeploymentInfo createRestDeploymant() {
+	private DeploymentInfo createRestDeployment() {
 		
 		ServletInfo restServlet = servlet("ResteasyServlet", HttpServletDispatcher.class)
 				.addMapping("/*");
